@@ -2,7 +2,7 @@
 session_start();
 include "koneksi.php";
 
-// Menambahkan item ke cart
+
 if(isset($_POST['menu_id'])){
     $id = $_POST['menu_id'];
     $result = mysqli_query($conn, "SELECT * FROM menu WHERE id = $id");
@@ -19,13 +19,13 @@ if(isset($_POST['menu_id'])){
     }
 }
 
-// Hapus item dari cart
+
 if(isset($_GET['remove'])){
     $id = $_GET['remove'];
     unset($_SESSION['cart'][$id]);
 }
 
-// Update jumlah item
+
 if(isset($_POST['update'])){
     foreach($_POST['quantities'] as $id => $qty){
         if($qty <= 0){
@@ -36,7 +36,7 @@ if(isset($_POST['update'])){
     }
 }
 
-// Checkout
+
 $success = '';
 $checkoutSummary = [];
 if(isset($_POST['checkout'])){
@@ -51,17 +51,17 @@ if(isset($_POST['checkout'])){
             $total += $item['harga'] * $item['quantity'];
         }
 
-        // Simpan ke tabel pesanan
+       
         $stmt = $conn->prepare("INSERT INTO pesanan (user_id, metode, total_harga, status) VALUES (?, ?, ?, ?)");
-        $user_id = 1; // contoh, ganti sesuai session user
+        $user_id = 1; 
         $status = 'Pending';
         $stmt->bind_param("isds", $user_id, $metode, $total, $status);
         $stmt->execute();
 
-        // Simpan ringkasan pesanan untuk ditampilkan
+        
         $checkoutSummary = $_SESSION['cart'];
 
-        // Kosongkan cart
+        
         $_SESSION['cart'] = [];
 
         $success = "Pemesanan berhasil! Silakan tunggu pesanan Anda.";

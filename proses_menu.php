@@ -10,10 +10,10 @@ $lokasiTemp = $_FILES['gambar']['tmp_name'];
 
 $folderTujuan = "uploads/" . $namaFile;
 
-// Pindahkan gambar ke folder uploads
+
 move_uploaded_file($lokasiTemp, $folderTujuan);
 
-// Simpan data ke database
+
 $query = "INSERT INTO menu (nama, harga, kategori, gambar)
           VALUES ('$nama', '$harga', '$kategori', '$namaFile')";
 

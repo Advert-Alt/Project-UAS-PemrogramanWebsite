@@ -1,8 +1,8 @@
 <?php
-// Lokasi file data
+
 $file = "data_pesan.txt";
 
-// Cek apakah file ada
+
 if (!file_exists($file)) {
     $pesan = "Belum ada data pesan.";
 } else {

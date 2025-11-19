@@ -1,7 +1,7 @@
 <?php
 include "koneksi.php";
 
-// Ambil semua pesanan beserta detailnya, urut dari yang terbaru
+
 $query = "SELECT p.id AS pesanan_id, p.metode, p.total_harga, p.status, p.dibuat_pada,
                  d.nama AS menu_nama, d.harga, d.jumlah, d.subtotal
           FROM pesanan p
@@ -9,7 +9,7 @@ $query = "SELECT p.id AS pesanan_id, p.metode, p.total_harga, p.status, p.dibuat
           ORDER BY p.dibuat_pada DESC";
 $result = mysqli_query($conn, $query);
 
-// Kelompokkan per pesanan
+
 $pesanan_list = [];
 while($row = mysqli_fetch_assoc($result)){
     $pesanan_id = $row['pesanan_id'];

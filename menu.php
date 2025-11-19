@@ -52,7 +52,7 @@ $menu = mysqli_query($conn, "SELECT * FROM menu WHERE tersedia = 1");
 </head>
 <body>
 
-<!-- HEADER -->
+
 <section class="menu-header">
     <h1 class="fw-bold">Our Coffee Menu</h1>
     <p>Freshly brewed, served with passion ☕</p>
@@ -65,7 +65,7 @@ $menu = mysqli_query($conn, "SELECT * FROM menu WHERE tersedia = 1");
         <?php while ($row = mysqli_fetch_assoc($menu)) { ?>
         <div class="col-md-4">
             <div class="card p-3">
-                <!-- Ubah src menjadi langsung dari database -->
+                
                 <img src="<?= $row['gambar'] ?>" class="card-img-top rounded" height="250" style="object-fit: cover;">
                 
                 <div class="card-body text-center">

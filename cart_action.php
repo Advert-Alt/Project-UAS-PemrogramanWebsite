@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $harga = $_POST['harga'];
     $jumlah = $_POST['jumlah'] ?? 1;
 
-    // Jika item sudah ada di cart, jumlah bertambah
+   
     if(isset($_SESSION['cart'][$id])){
         $_SESSION['cart'][$id]['jumlah'] += $jumlah;
     } else {
@@ -20,6 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Redirect ke halaman cart
+
 header("Location: cart.php");
 exit;
