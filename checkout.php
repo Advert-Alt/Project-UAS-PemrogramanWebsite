@@ -18,7 +18,7 @@ foreach($_SESSION['cart'] as $item){
 
 
 $stmt = $conn->prepare("INSERT INTO pesanan (user_id, metode, total_harga, status) VALUES (?, ?, ?, ?)");
-$user_id = 0; // kalau tidak login, bisa 0
+$user_id = 0; 
 $status = "Pending";
 $stmt->bind_param("isii", $user_id, $metode, $total, $status);
 $stmt->execute();

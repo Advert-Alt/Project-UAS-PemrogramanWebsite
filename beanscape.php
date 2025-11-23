@@ -177,7 +177,7 @@
               Perjalanan kopi dari biji hingga cangkir, dan bagaimana BeanScape hadir untuk 
               menghadirkan kehangatan di setiap seduhan.
             </p>
-            <a href="#" class="btn btn-coffee w-100">Baca Selengkapnya</a>
+            <a href="blog.php?id=1" class="btn btn-coffee w-100">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@
               Tips barista untuk membuat kopi aromatik hanya dengan alat sederhana. 
               Mulai dari grind size hingga teknik seduh. Nikmati kopi ala kafe di rumah!
             </p>
-            <a href="#" class="btn btn-coffee w-100">Baca Selengkapnya</a>
+            <a href="blog.php?id=2" class="btn btn-coffee w-100">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
@@ -211,7 +211,7 @@
               Dari Latte hingga Cold Brew, inilah menu yang paling sering dipesan 
               dan menjadi kebanggaan BeanScape. Adakah favoritmu di sini?
             </p>
-            <a href="#" class="btn btn-coffee w-100">Baca Selengkapnya</a>
+            <a href="blog.php?id=3" class="btn btn-coffee w-100">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
