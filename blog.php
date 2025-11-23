@@ -12,6 +12,18 @@
         h2 { color:#d7b89c; }
         .btn-coffee { background:#3a302b; color:#fff; border:none; }
         .btn-coffee:hover { opacity:0.8; }
+         a.btn-coffee {
+            background-color: #3a302b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            }
+            a.btn-coffee:hover {
+            opacity: 0.8;
+            }
     </style>
 </head>
 <body>
@@ -38,6 +50,9 @@
     </div>
 
 </div>
+
+     <a href="beanscape.php#blog" class="btn-coffee mt-4">← Kembali ke Website Kami</a>
+
 
 </body>
 </html>
